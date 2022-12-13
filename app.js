@@ -80,5 +80,6 @@ app.post("/login", async (request, response) => {
   }
 });
 
-
+app.put("/change-password".async(request,response)=>{
+})
 module.exports = app;
