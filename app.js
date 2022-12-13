@@ -80,18 +80,5 @@ app.post("/login", async (request, response) => {
   }
 });
 
-app.put("/change-password", async (request, response) => {
-  const { username, Password } = request.body;
 
-  const updatePasswordQuery = `
-  UPDATE
-    user
-  SET
-    username = '${username}',
-    password = ${password}
- `;
-
-  await db.run(updatePasswordQuery);
-  response.send("ok");
-});
 module.exports = app;
